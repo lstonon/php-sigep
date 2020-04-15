@@ -145,16 +145,16 @@ class ServicoDePostagem extends AbstractModel
      */
     public function __construct($serviceCode)
     {
-        if (!isset(self::$services[$serviceCode])) {
-            throw new Exception('There is no service with the code "' . $serviceCode . '".');
-        }
+        //if (!isset(self::$services[$serviceCode])) {
+        //    throw new Exception('There is no service with the code "' . $serviceCode . '".');
+        //}
 
-        $service = self::$services[$serviceCode];
+        //$service = self::$services[$serviceCode];
         parent::__construct(
             array(
                 'codigo'    => $serviceCode,
-                'nome'      => $service[0],
-                'idServico' => $service[1],
+                'nome'      => '',
+                'idServico' => '',
             )
         );
     }
